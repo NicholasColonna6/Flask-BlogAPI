@@ -16,7 +16,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 0
 def _set_sqlite_pragma(dbapi_connection, connection_record):
 	if isinstance(dbapi_connection, SQLite3Connection):
 		cursor = dbapi_connection.cursor()
-		cursur.execute("PRAGMA foreign_keys=ON;")
+		cursor.execute("PRAGMA foreign_keys=ON;")
 		cursor.close()
 
 db = SQLAlchemy(app)
@@ -40,4 +40,3 @@ class BlogPost(db.Model):
 	body = db.Column(db.String(200))
 	date = db.Column(db.Date)
 	user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-	
