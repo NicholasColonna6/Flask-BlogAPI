@@ -19,16 +19,16 @@ class LinkedList:
         ll_string += "None"
         print(ll_string)
 
-    def to_array(self):
-        arr = []
+    def to_list(self):
+        lst = []
         if self.head is None:
-            return arr
+            return lst
         
         node = self.head
         while node is not None:
-            arr.append(node.data)
+            lst.append(node.data)
             node = node.next
-        return arr
+        return lst
 
     def insert_beginning(self, data):
         if self.head is None:
