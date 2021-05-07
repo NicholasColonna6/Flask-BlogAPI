@@ -45,3 +45,11 @@ class LinkedList:
 
         self.last_node.next = Node(data, None)
         self.last_node = self.last_node.next
+
+    def get_user_by_id(self, user_id):
+        node = self.head
+        while node is not None:
+            if node.data["id"] == int(user_id):
+                return node.data
+            node = node.next
+        return None
