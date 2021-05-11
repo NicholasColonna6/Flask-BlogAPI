@@ -1,3 +1,5 @@
+# Basic Implementation of the Linked List data structure
+
 # class to represent nodes within a linked list
 class Node:
     def __init__(self, data=None, next=None):
@@ -39,9 +41,9 @@ class LinkedList:
         if self.head is None:
             self.head = Node(data, None)
             self.last_node = self.head
-        
-        new_node = Node(data, self.head)
-        self.head = new_node
+        else:
+            new_node = Node(data, self.head)
+            self.head = new_node
 
     # Insert a node at the end of a linked list
     # By keeping track of 'last_node', we can insert at end in O(1) time rather than O(n)
