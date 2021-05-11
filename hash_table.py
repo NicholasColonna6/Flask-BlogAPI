@@ -1,15 +1,18 @@
 # Basic Implementation of the Hash Table data structure
 
+# class to represent linked lists at each index of the hash table
 class Node:
 	def __init__(self, data=None, next=None):
 		self.data = data
 		self.next = next
 
+# class to represent key/value pairs as the data within our node/linked-list
 class Data:
 	def __init__(self, key, value):
 		self.key = key
 		self.value = value
 
+# class to represent the hash table
 class HashTable:
 	def __init__(self, table_size):
 		self.table_size = table_size
