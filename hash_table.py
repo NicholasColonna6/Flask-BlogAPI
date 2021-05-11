@@ -42,7 +42,7 @@ class HashTable:
 		hashed_key = self.custom_hash(key)
 		if self.hash_table[hashed_key] is not None:
 			node = self.hash_table[hashed_key]
-			if node.next_node is None:
+			if node.next is None:
 				return node.data.value
 			while node is not None:
 				if key == node.data.key:
