@@ -152,9 +152,9 @@ def create_blog_post(user_id):
     db.session.commit()
     return jsonify({"message": "new blog post created"}), 200
 
-# Retrieve all blog posts on the blog
+# Retrieve a specific blog post based on a given blog post id
 @app.route("/blog_post/<blog_post_id>", methods=["GET"])
-def get_all_blog_posts(blog_post_id):
+def get_one_blog_post(blog_post_id):
     blog_posts = BlogPost.query.all()
     random.shuffle(blog_posts)
 
