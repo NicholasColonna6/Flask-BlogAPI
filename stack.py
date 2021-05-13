@@ -9,7 +9,7 @@ class Node:
 # class to represent the Stack data structure
 class Stack:
 	def __init__(self):
-		self.head = head
+		self.head = None
 
 	# return the top node in the stack (without removing)
 	def peek(self):
