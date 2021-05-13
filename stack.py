@@ -28,3 +28,17 @@ class Stack:
 			temp = self.head
 			self.head = self.head.next
 			return temp
+"""
+s = Stack()
+s.push(3)
+s.push(2)
+s.push(1)
+print(s.peek().data)
+print(s.pop().data)
+print(s.peek().data)
+print(s.pop().data)
+print(s.peek().data)
+print(s.pop().data)
+print(s.peek().data)
+print(s.pop().data)
+"""
