@@ -1,0 +1,9 @@
+<!doctype html>
+<html>
+	<body>
+		{% for post in posts %}
+		<div> {{ "{} : {} - {}".format(post['user_id'], post['title'], post['body']) }} </div>
+		<div> {{"__________________________________________________"}} </div>
+		{% endfor %}
+	</body>
+</html>
