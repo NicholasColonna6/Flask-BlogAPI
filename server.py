@@ -2,7 +2,7 @@ from sqlite3 import Connection as SQLite3Connection
 from datetime import datetime
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 import random
 import linked_list
@@ -48,6 +48,15 @@ class BlogPost(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
 # Routes
+# Very basic HTML view of the blog posts
+@app.route('/', methods=["GET"])
+def index():
+    if request.method == "GET":
+        pass
+   
+    posts = BlogPost.query.all()
+    return render_template('index.html', posts=posts)   # looks into templates folder, finds the index.html file, and loads the template
+
 # Create a user for the blog
 @app.route("/user", methods=["POST"])
 def create_user():
