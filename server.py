@@ -211,7 +211,7 @@ def get_numeric_post_bodies():
 
     return jsonify(return_list)
 
-# Delete a specific blog post based on a given blog post id
+# Delete the last 10 blog posts from the server
 @app.route("/blog_post/delete_last_10_blog_posts", methods=["DELETE"])
 def delete_last_10_blog_posts():
     blog_posts = BlogPost.query.all()
